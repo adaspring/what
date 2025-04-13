@@ -7,4 +7,3 @@
   [headers.values]
     Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'"
     X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
