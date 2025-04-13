@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Compatibility Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/css-tree@2.1.1/dist/csstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/acorn@8.10.0/dist/acorn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/acorn-walk@8.2.0/dist/walk.min.js"></script>
+</head>
+<body>
+    <h1>Code Compatibility Analyzer</h1>
+    
+    <div class="upload-section">
+        <input type="file" id="htmlFile" accept=".html">
+        <input type="file" id="cssFile" accept=".css">
+        <input type="file" id="jsFile" accept=".js">
+        <button onclick="analyzeCode()">Analyze Code</button>
+        <div id="status"></div>
+    </div>
+
+    <div class="report" id="report" style="display: none;">
+        <h3>Compatibility Report</h3>
+        <div id="overallScore"></div>
+        <h4>Browser Support</h4>
+        <div id="browserResults"></div>
+        <h4>Device Support</h4>
+        <div id="deviceResults"></div>
+        <h4>Detected Features</h4>
+        <div id="featureResults"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
