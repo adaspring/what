@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" 
         content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'">
-    <title>Browser Compatibility Analyzer 2.0</title>
+    <title>Browser Compatibility Analyzer</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/css-tree@2.1.1/dist/csstree.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/acorn@8.10.0/dist/acorn.min.js"></script>
@@ -22,12 +22,12 @@
         <input type="file" id="htmlFile" accept=".html">
         <input type="file" id="cssFile" accept=".css">
         <input type="file" id="jsFile" accept=".js">
-        <button onclick="analyzeCode()">Analyze Code</button>
+        <button onclick="analyzeCode()" id="analyzeBtn">Analyze Code</button>
         <div id="status"></div>
     </div>
 
     <div class="report" id="report" style="display: none;">
-        <h3>Enhanced Compatibility Report</h3>
+        <h3>Compatibility Report</h3>
         <div id="overallScore"></div>
         
         <div class="platform-report">
