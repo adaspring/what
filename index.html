@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">
+    <title>Browser Compatibility Analyzer 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/css-tree@2.1.1/dist/csstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/acorn@8.10.0/dist/acorn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/acorn-walk@8.2.0/dist/walk.min.js"></script>
+</head>
+<body>
+    <h1>Code Compatibility Analyzer</h1>
+    
+    <div class="security-warning">
+        🔒 Secure Analysis: Code processing done in isolated web workers
+    </div>
+
+    <div class="upload-section">
+        <input type="file" id="htmlFile" accept=".html">
+        <input type="file" id="cssFile" accept=".css">
+        <input type="file" id="jsFile" accept=".js">
+        <button onclick="analyzeCode()">Analyze Code</button>
+        <div id="status"></div>
+    </div>
+
+    <div class="report" id="report" style="display: none;">
+        <h3>Enhanced Compatibility Report</h3>
+        <div id="overallScore"></div>
+        
+        <div class="platform-report">
+            <div class="browser-card">
+                <h4>Browser Support</h4>
+                <div id="browserResults"></div>
+            </div>
+            
+            <div class="browser-card">
+                <h4>Device & Platform</h4>
+                <div id="deviceResults"></div>
+                <div id="viewportAnalysis"></div>
+                <div id="touchAnalysis"></div>
+            </div>
+        </div>
+
+        <div class="advanced-section">
+            <h4>Advanced Features</h4>
+            <div id="featureResults"></div>
+            <div id="es6Analysis"></div>
+            <div id="mediaQueryAnalysis"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
