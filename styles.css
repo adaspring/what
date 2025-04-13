@@ -1,0 +1,36 @@
+/* styles.css */
+:root {
+    --primary: #2196F3;
+    --warning: #ff9800;
+    --danger: #f44336;
+    --safe: #4CAF50;
+}
+
+.security-warning {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: #856404;
+}
+
+.platform-report {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.advanced-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.file-warning {
+    color: var(--danger);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
