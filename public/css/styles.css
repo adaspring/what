@@ -7,7 +7,8 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 2rem;
+    margin: 0;
+    padding: 2rem;
     background: #f8f9fa;
     max-width: 1200px;
     margin: 2rem auto;
@@ -36,6 +37,7 @@ input[type="file"] {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    width: 100%;
 }
 
 button {
@@ -49,8 +51,36 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+button:hover:not(:disabled) {
     opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#analyzeBtn.analyzing {
+    position: relative;
+    padding-left: 40px;
+}
+
+#analyzeBtn.analyzing::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    to { transform: translateY(-50%) rotate(360deg); }
 }
 
 .report {
@@ -106,21 +136,6 @@ button:hover {
     padding: 1rem;
     background: #f8f9fa;
     border-radius: 8px;
-}
-
-.touch-indicator {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0.5rem 0;
-}
-
-.touch-badge {
-    padding: 0.25rem 0.5rem;
-    border-radius: 12px;
-    font-size: 0.8em;
-    background: var(--primary);
-    color: white;
 }
 
 .file-warning {
